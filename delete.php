@@ -9,6 +9,7 @@
 
   $db = new mysqli('localhost', 'root', '','mydb');
   $db->query("DELETE FROM `users` where `login` = '$login'");
+  session_destroy();
   echo "Пользователь удалён";
 ?>
 <br>
